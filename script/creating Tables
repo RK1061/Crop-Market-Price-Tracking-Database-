@@ -1,1 +1,78 @@
+==============================================================================================================================================================================================
+==============================================================================================================================================================================================
+The Crop Market Analysis Database tracks farmers, crops, market transactions, and price fluctuations. It records farmer details, crop yields, sales, and supply-demand trends.
+Key tables include Farmers, Crops, Farmers_Crops, Market, Market_Transaction, Market_Price, and Supply_Demand**, ensuring efficient agricultural trade and data-driven decision-making. 🚜📊
+==============================================================================================================================================================================================
+==============================================================================================================================================================================================
+
+create database crop_market_analysis;
+use crop_market_analysis;
+
+/* creating farmers table*/ 
+CREATE TABLE Farmers (
+    Farmer_id INT PRIMARY KEY,
+    Farmer_name VARCHAR(50) NOT NULL,
+    Phone_number VARCHAR(10) NOT NULL UNIQUE,
+    Location VARCHAR(50) NOT NULL,
+    CHECK (Phone_number REGEXP '^[0-9]{10}$')  
+);
+
+/* creating CROPS table*/ 
+create Table Crops (
+     crop_id int primary key,
+     crop_name varchar (50) not null,
+     Season VARCHAR(20) NOT NULL,   
+     Yield_quantity DECIMAL(10,2)
+     );     
+
+/* creating farmers crops*/ 
+CREATE TABLE Farmers_Crops (
+    farmer_crop_id INT PRIMARY KEY,    
+    farmer_id INT,                    
+    crop_id INT,  
+    quantity DECIMAL(10,2) NOT NULL,  
+    FOREIGN KEY (farmer_id) REFERENCES Farmers(Farmer_id),  
+    FOREIGN KEY (crop_id) REFERENCES Crops(crop_id)  
+);
+
+/* creating Market*/ 
+CREATE TABLE Market (
+      Market_id int primary key,
+      Market_name varchar (50),
+      Location Varchar (50));
+      
+      
+/* creating Market_transaction*/ 
+CREATE TABLE Market_Transaction (
+    Transaction_id INT PRIMARY KEY,
+    Market_id INT,
+    Farmer_crop_ID INT,
+    Transaction_date DATE NOT NULL,
+    FOREIGN KEY (Market_id) REFERENCES Market(Market_id),  
+    FOREIGN KEY (Farmer_crop_id) REFERENCES Farmers_Crops(farmer_crop_id)
+);
+
+/* creating Market price*/ 
+CREATE TABLE Market_price (
+    Price_id INT PRIMARY KEY,
+    Market_transaction_id INT,
+    Price_per_kg INT,
+    Transaction_date INT,
+    FOREIGN KEY (Market_transaction_id) REFERENCES Market_transaction (transaction_id)
+);
+
+/* creating Supply demand*/ 
+CREATE TABLE Supply_Demand (
+    Record_id INT PRIMARY KEY AUTO_INCREMENT,
+    Market_transaction_id INT,
+    Supply_quantity DECIMAL(10,2) NOT NULL,
+    Demand_quantity DECIMAL(10,2) NOT NULL,
+    Record_date DATE NOT NULL,
+    Market_price_id INT,
+    FOREIGN KEY (Market_transaction_id) REFERENCES Market_Transaction(Transaction_id),
+    FOREIGN KEY (Market_price_id) REFERENCES Market_price(price_id)
+);
+
+
+
 
