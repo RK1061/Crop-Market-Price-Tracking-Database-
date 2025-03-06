@@ -5,29 +5,32 @@ Key tables include Farmers, Crops, Farmers_Crops, Market, Market_Transaction, Ma
 ==============================================================================================================================================================================================
 ==============================================================================================================================================================================================
 
-create database crop_market_analysis;
+ccreate database crop_market_analysis;
 use crop_market_analysis;
 
 /* creating farmers table*/ 
+ALTER TABLE farmers_crops DROP FOREIGN KEY farmers_crops_ibfk_1;
+
+drop table farmers;
 CREATE TABLE Farmers (
-    Farmer_id INT PRIMARY KEY,
-    Farmer_name VARCHAR(50) NOT NULL,
-    Phone_number VARCHAR(10) NOT NULL UNIQUE,
-    Location VARCHAR(50) NOT NULL,
-    CHECK (Phone_number REGEXP '^[0-9]{10}$')  
+    Farmer_id INT AUTO_INCREMENT PRIMARY KEY,
+    Farmer_name VARCHAR(255),
+    Phone_number VARCHAR(15),
+    Location VARCHAR(255)
 );
 
 /* creating CROPS table*/ 
-create Table Crops (
-     crop_id int primary key,
-     crop_name varchar (50) not null,
-     Season VARCHAR(20) NOT NULL,   
-     Yield_quantity DECIMAL(10,2)
-     );     
+CREATE TABLE Crops (
+    crop_id INT AUTO_INCREMENT PRIMARY KEY,  -- Ensures unique ID with auto-increment
+    crop_name VARCHAR(50) NOT NULL,
+    Season VARCHAR(20) NOT NULL
+ 
+);
+
 
 /* creating farmers crops*/ 
-CREATE TABLE Farmers_Crops (
-    farmer_crop_id INT PRIMARY KEY,    
+CREATE TABLE IF NOT EXISTS Farmers_Crops (
+    farmer_crop_id INT auto_increment PRIMARY KEY,    
     farmer_id INT,                    
     crop_id INT,  
     quantity DECIMAL(10,2) NOT NULL,  
@@ -37,40 +40,45 @@ CREATE TABLE Farmers_Crops (
 
 /* creating Market*/ 
 CREATE TABLE Market (
-      Market_id int primary key,
-      Market_name varchar (50),
-      Location Varchar (50));
-      
-      
-/* creating Market_transaction*/ 
-CREATE TABLE Market_Transaction (
-    Transaction_id INT PRIMARY KEY,
-    Market_id INT,
-    Farmer_crop_ID INT,
-    Transaction_date DATE NOT NULL,
-    FOREIGN KEY (Market_id) REFERENCES Market(Market_id),  
-    FOREIGN KEY (Farmer_crop_id) REFERENCES Farmers_Crops(farmer_crop_id)
+    Market_id INT AUTO_INCREMENT PRIMARY KEY,
+    Market_name VARCHAR(50) NOT NULL,
+    Location VARCHAR(50) NOT NULL
 );
 
+/* creating Market_transaction*/ 
+
+CREATE TABLE Market_Transaction (
+    Transaction_id INT AUTO_INCREMENT PRIMARY KEY,
+    Market_id INT NOT NULL,
+    Farmer_crop_ID INT NOT NULL,
+    Transaction_date DATE NOT NULL,
+    FOREIGN KEY (Market_id) REFERENCES Market(Market_id) ON DELETE CASCADE,  
+    FOREIGN KEY (Farmer_crop_ID) REFERENCES Farmers_Crops(farmer_crop_id) ON DELETE CASCADE
+);
+
+
+
 /* creating Market price*/ 
+
 CREATE TABLE Market_price (
-    Price_id INT PRIMARY KEY,
-    Market_transaction_id INT,
-    Price_per_kg INT,
-    Transaction_date INT,
-    FOREIGN KEY (Market_transaction_id) REFERENCES Market_transaction (transaction_id)
+    Price_id INT AUTO_INCREMENT PRIMARY KEY,
+    Market_transaction_id INT NOT NULL,
+    Price_per_kg DECIMAL(10,2) NOT NULL,
+    Transaction_date DATE NOT NULL,
+    FOREIGN KEY (Market_transaction_id) REFERENCES Market_transaction(transaction_id) ON DELETE CASCADE
 );
 
 /* creating Supply demand*/ 
+
 CREATE TABLE Supply_Demand (
-    Record_id INT PRIMARY KEY AUTO_INCREMENT,
-    Market_transaction_id INT,
+    Record_id INT AUTO_INCREMENT PRIMARY KEY,
+    Market_transaction_id INT NOT NULL,
     Supply_quantity DECIMAL(10,2) NOT NULL,
     Demand_quantity DECIMAL(10,2) NOT NULL,
     Record_date DATE NOT NULL,
-    Market_price_id INT,
-    FOREIGN KEY (Market_transaction_id) REFERENCES Market_Transaction(Transaction_id),
-    FOREIGN KEY (Market_price_id) REFERENCES Market_price(price_id)
+    Market_price_id INT NOT NULL,
+    FOREIGN KEY (Market_transaction_id) REFERENCES Market_Transaction(Transaction_id) ON DELETE CASCADE,
+    FOREIGN KEY (Market_price_id) REFERENCES Market_price(Price_id) ON DELETE CASCADE
 );
 
 
