@@ -5,13 +5,11 @@ Key tables include Farmers, Crops, Farmers_Crops, Market, Market_Transaction, Ma
 ==============================================================================================================================================================================================
 ==============================================================================================================================================================================================
 
-ccreate database crop_market_analysis;
-use crop_market_analysis;
+create database crop_market;
+use crop_market;
 
 /* creating farmers table*/ 
-ALTER TABLE farmers_crops DROP FOREIGN KEY farmers_crops_ibfk_1;
 
-drop table farmers;
 CREATE TABLE Farmers (
     Farmer_id INT AUTO_INCREMENT PRIMARY KEY,
     Farmer_name VARCHAR(255),
@@ -30,7 +28,7 @@ CREATE TABLE Crops (
 
 /* creating farmers crops*/ 
 CREATE TABLE IF NOT EXISTS Farmers_Crops (
-    farmer_crop_id INT auto_increment PRIMARY KEY,    
+    farmer_crop_id INT PRIMARY KEY,    
     farmer_id INT,                    
     crop_id INT,  
     quantity DECIMAL(10,2) NOT NULL,  
@@ -57,11 +55,10 @@ CREATE TABLE Market_Transaction (
 );
 
 
-
 /* creating Market price*/ 
 
 CREATE TABLE Market_price (
-    Price_id INT AUTO_INCREMENT PRIMARY KEY,
+    Price_id INT PRIMARY KEY,
     Market_transaction_id INT NOT NULL,
     Price_per_kg DECIMAL(10,2) NOT NULL,
     Transaction_date DATE NOT NULL,
@@ -80,7 +77,3 @@ CREATE TABLE Supply_Demand (
     FOREIGN KEY (Market_transaction_id) REFERENCES Market_Transaction(Transaction_id) ON DELETE CASCADE,
     FOREIGN KEY (Market_price_id) REFERENCES Market_price(Price_id) ON DELETE CASCADE
 );
-
-
-
-
