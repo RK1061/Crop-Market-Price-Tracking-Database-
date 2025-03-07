@@ -14,6 +14,8 @@ CREATE TABLE Farmers (
     Farmer_id INT AUTO_INCREMENT PRIMARY KEY,
     Farmer_name VARCHAR(255),
     Phone_number VARCHAR(15),
+    email varchar (50),
+    Passwords varchar (50),
     Location VARCHAR(255)
 );
 
