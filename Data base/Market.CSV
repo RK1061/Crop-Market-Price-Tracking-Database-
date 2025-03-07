@@ -1,0 +1,54 @@
+Market_id,Market_name,Location
+1,"Azadpur Mandi",Delhi
+2,"Vashi APMC",Mumbai
+3,"Koyambedu Market",Chennai
+4,"Yeshwanthpur Market",Bangalore
+5,"Maniktala Market",Kolkata
+6,"Krishi Upaj Mandi",Jaipur
+7,"Bhubaneswar Market",Bhubaneswar
+8,"Gandhinagar Mandi",Gujarat
+9,"Lucknow Wholesale Market",Lucknow
+10,"Chandigarh Grain Market",Chandigarh
+11,"Amritsar Mandi",Punjab
+12,"Patna Mandi",Bihar
+13,"Indore APMC","Madhya Pradesh"
+14,"Bhopal Krishi Upaj Mandi","Madhya Pradesh"
+15,"Surat Vegetable Market",Gujarat
+16,"Nagpur APMC",Maharashtra
+17,"Pune Market Yard",Maharashtra
+18,"Nashik Onion Market",Maharashtra
+19,"Raipur APMC",Chhattisgarh
+20,"Ranchi Mandi",Jharkhand
+21,"Shimla Vegetable Market","Himachal Pradesh"
+22,"Dehradun Mandi",Uttarakhand
+23,"Varanasi APMC","Uttar Pradesh"
+24,"Kanpur Wholesale Market","Uttar Pradesh"
+25,"Meerut Grain Market","Uttar Pradesh"
+26,"Gorakhpur Mandi","Uttar Pradesh"
+27,"Guwahati APMC",Assam
+28,"Shillong Mandi",Meghalaya
+29,"Imphal Vegetable Market",Manipur
+30,"Aizawl APMC",Mizoram
+31,"Agartala Mandi",Tripura
+32,"Kohima Market",Nagaland
+33,"Itanagar APMC","Arunachal Pradesh"
+34,"Gangtok Vegetable Market",Sikkim
+35,"Hyderabad Bowenpally Market",Telangana
+36,"Secunderabad APMC",Telangana
+37,"Warangal Mandi",Telangana
+38,"Vijayawada APMC","Andhra Pradesh"
+39,"Visakhapatnam Market","Andhra Pradesh"
+40,"Tirupati Mandi","Andhra Pradesh"
+41,"Madurai APMC","Tamil Nadu"
+42,"Coimbatore Vegetable Market","Tamil Nadu"
+43,"Trichy Mandi","Tamil Nadu"
+44,"Kozhikode Wholesale Market",Kerala
+45,"Thiruvananthapuram APMC",Kerala
+46,"Kottayam Mandi",Kerala
+47,"Bhubaneswar APMC",Odisha
+48,"Cuttack Market",Odisha
+49,"Balasore Mandi",Odisha
+50,"Durgapur APMC","West Bengal"
+51,"Siliguri Wholesale Market","West Bengal"
+52,"Howrah Vegetable Market","West Bengal"
+53,"Haldia APMC","West Bengal"

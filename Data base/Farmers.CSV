@@ -1,0 +1,56 @@
+Farmer_id,Farmer_name,Phone_number,email,Passwords,Location
+1,"Ramesh Kumar",9876543210,ramesh.kumar@example.com,pass123,Punjab
+2,"Suresh Yadav",8765432109,suresh.yadav@example.com,pass123,"Uttar Pradesh"
+3,"Amit Patil",7654321098,amit.patil@example.com,pass123,Maharashtra
+4,"Rohit Patil",9898653541,rohit.patil@example.com,pass123,Maharashtra
+5,"Vikram Singh",7896541230,vikram.singh@example.com,pass123,Haryana
+6,"Manoj Sharma",8796543210,manoj.sharma@example.com,pass123,Rajasthan
+7,"Sunil Verma",9632587410,sunil.verma@example.com,pass123,Bihar
+8,"Prakash Jha",8521479630,prakash.jha@example.com,pass123,Jharkhand
+9,"Rajeev Ranjan",9517538462,rajeev.ranjan@example.com,pass123,"West Bengal"
+10,"Harish Choudhary",7418529630,harish.choudhary@example.com,pass123,"Madhya Pradesh"
+11,"Deepak Mehta",7539518520,deepak.mehta@example.com,pass123,Gujarat
+12,"Suraj Thakur",8523697410,suraj.thakur@example.com,pass123,Chhattisgarh
+13,"Pawan Gupta",7854129630,pawan.gupta@example.com,pass123,"Himachal Pradesh"
+14,"Alok Tripathi",7896321450,alok.tripathi@example.com,pass123,Uttarakhand
+15,"Rajendra Tiwari",9512364780,rajendra.tiwari@example.com,pass123,Odisha
+16,"Nitin Jadhav",7894561230,nitin.jadhav@example.com,pass123,Goa
+17,"Anil Kumble",7895412360,anil.kumble@example.com,pass123,Karnataka
+18,"Karthik Iyer",9632581470,karthik.iyer@example.com,pass123,"Tamil Nadu"
+19,"Mohan Rao",7419638520,mohan.rao@example.com,pass123,"Andhra Pradesh"
+20,"Ganesh Naidu",8523697415,ganesh.naidu@example.com,pass123,Telangana
+21,"Ravi Shankar",7896541236,ravi.shankar@example.com,pass123,Kerala
+22,"Keshav Das",7896541278,keshav.das@example.com,pass123,Assam
+23,"Arun Bora",7896521479,arun.bora@example.com,pass123,Meghalaya
+24,"Santosh Sen",7896543125,santosh.sen@example.com,pass123,Tripura
+25,"Dinesh Yadav",7896512378,dinesh.yadav@example.com,pass123,Manipur
+26,"Sanjay Patel",7896542365,sanjay.patel@example.com,pass123,Nagaland
+27,"Harendra Chauhan",7896541287,harendra.chauhan@example.com,pass123,"Arunachal Pradesh"
+28,"Shankar Sahu",7896543126,shankar.sahu@example.com,pass123,Mizoram
+29,"Bharat Mahato",7896547854,bharat.mahato@example.com,pass123,Sikkim
+30,"Vinod Thakur",7854123698,vinod.thakur@example.com,pass123,Punjab
+31,"Mahesh Gupta",7896547841,mahesh.gupta@example.com,pass123,Haryana
+32,"Sanjay Singh",7896541472,sanjay.singh@example.com,pass123,"Uttar Pradesh"
+33,"Rajesh Yadav",7896542369,rajesh.yadav@example.com,pass123,Bihar
+34,"Ashok Sharma",7896547845,ashok.sharma@example.com,pass123,Rajasthan
+35,"Deepak Sinha",7896547896,deepak.sinha@example.com,pass123,Jharkhand
+36,"Pradeep Verma",7896541237,pradeep.verma@example.com,pass123,"West Bengal"
+37,"Vikas Choudhary",7896547852,vikas.choudhary@example.com,pass123,"Madhya Pradesh"
+38,"Naveen Tiwari",7896547832,naveen.tiwari@example.com,pass123,Gujarat
+39,"Kamal Mehta",7896547123,kamal.mehta@example.com,pass123,Chhattisgarh
+40,"Arvind Kumar",7896543698,arvind.kumar@example.com,pass123,"Himachal Pradesh"
+41,"Ravi Tripathi",7896547412,ravi.tripathi@example.com,pass123,Uttarakhand
+42,"Gopal Das",7896543214,gopal.das@example.com,pass123,Odisha
+43,"Suresh Jadhav",7896541235,suresh.jadhav@example.com,pass123,Goa
+44,"Bharat Kumble",7896547894,bharat.kumble@example.com,pass123,Karnataka
+45,"Madhan Iyer",7896547893,madhan.iyer@example.com,pass123,"Tamil Nadu"
+46,"Murali Rao",7896547892,murali.rao@example.com,pass123,"Andhra Pradesh"
+47,"Ramesh Naidu",7896547891,ramesh.naidu@example.com,pass123,Telangana
+48,"Venu Shankar",7896547890,venu.shankar@example.com,pass123,Kerala
+49,"Ajay Das",7896541239,ajay.das@example.com,pass123,Assam
+50,"Sanjay Bora",7896541478,sanjay.bora@example.com,pass123,Meghalaya
+51,"Raghu Sen",7896543654,raghu.sen@example.com,pass123,Tripura
+52,"Ganesh Yadav",7896542368,ganesh.yadav@example.com,pass123,Manipur
+53,"Prakash Patel",7896547415,prakash.patel@example.com,pass123,Nagaland
+54,"Surendra Chauhan",7896541473,surendra.chauhan@example.com,pass123,"Arunachal Pradesh"
+55,"Dilip Sahu",7896549632,dilip.sahu@example.com,pass123,Mizoram
